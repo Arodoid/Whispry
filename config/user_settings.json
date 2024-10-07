@@ -1,0 +1,22 @@
+{
+    "hotkey": "f16",
+    "input_device": "Analogue 1 + 2 (2- Focusrite US",
+    "output_device": "Microsoft Sound Mapper - Output",
+    "hold_to_talk": true,
+    "toggle_key": "f15",
+    "hotkey1": "f15",
+    "hotkey1_mode": "Toggle",
+    "hotkey1_model": null,
+    "hotkey1_output": "Clipboard",
+    "hotkey1_precontext": "You are cool guy. Chill man.",
+    "hotkey2": "f16",
+    "hotkey2_mode": "Hold",
+    "hotkey2_model": "gpt-4o-mini",
+    "hotkey2_output": "LLM",
+    "hotkey2_precontext": "User requests information. Provide responses directly and concisely without introductory phrases or additional commentary. Responses will be heard rather than read, so clarity and natural flow are essential. Provide a concise and helpful response. Keep the responce as short as humanly possible. 1 sentince max if not less. Dont use any emojis or special characters. Just use letters and numbers. Dont even use them when you think you should because you will accidently speak them out loud. Just dont do it.",
+    "hotkey3": "f17",
+    "hotkey3_mode": "Toggle",
+    "hotkey3_model": null,
+    "hotkey3_output": "Clipboard",
+    "hotkey3_precontext": "Provide a concise and helpful response for the third hotkey."
+}
