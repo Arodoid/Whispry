@@ -14,6 +14,7 @@ import os
 import keyboard
 import time
 import sounddevice as sd
+from plyer import notification  # Add this import
 
 class VoiceAssistantApp:
     def __init__(self, root):
@@ -84,7 +85,7 @@ class VoiceAssistantApp:
 
         self.create_widgets()
 
-        self.icon = None
+        self.icon = self.create_tray_icon()
 
         self.listeners = []
 
@@ -446,6 +447,15 @@ class VoiceAssistantApp:
 
     def hide_window_to_tray(self):
         self.root.withdraw()
+        self.show_notification("Voice Assistant", "Application minimized to tray.")  # Add this line
+
+    def show_notification(self, title, message):
+        notification.notify(
+            title=title,
+            message=message,
+            app_name="Voice Assistant",
+            timeout=5  # Notification duration in seconds
+        )
 
     def show_window(self, icon, item):
         self.root.deiconify()
@@ -467,6 +477,20 @@ class VoiceAssistantApp:
         self.logger.info("Closing application...")
         wait_for_audio_to_finish()
         self.root.destroy()
+
+    def create_tray_icon(self):
+        # Load an image file to use as the icon
+        icon_image = Image.open("images\icon.png")  # Ensure this path is correct
+
+        # Define the menu for the tray icon
+        menu = pystray.Menu(
+            item('Show', self.show_window),
+            item('Exit', self.exit_app)
+        )
+
+        # Create the icon
+        icon = pystray.Icon("voice_assistant", icon_image, "Voice Assistant", menu)
+        return icon
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')

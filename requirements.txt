@@ -9,3 +9,8 @@ pyperclip
 aiohttp
 python-dotenv
 pyaudio
+pynput
+google-cloud-texttospeech
+pydub
+playsound==1.2.2
+plyer

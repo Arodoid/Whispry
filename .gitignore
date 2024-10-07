@@ -1,0 +1,16 @@
+# Exclude specific files
+vaulted-valor-437718-u4-88ec6fd8e5eb.json
+voice_assistant.log
+app.spec
+.env
+
+# Exclude specific directories
+dist/
+build/
+venv/
+config/__pycache__
+utils/__pycache__
+
+.vscode/
+.whisper/
+.pyc/
