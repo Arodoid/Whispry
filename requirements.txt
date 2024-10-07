@@ -1,0 +1,11 @@
+keyboard
+sounddevice
+requests
+pyttsx3
+numpy
+pystray
+Pillow
+pyperclip
+aiohttp
+python-dotenv
+pyaudio
